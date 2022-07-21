@@ -17,7 +17,7 @@
     <div class="container">
         <div class="header">
             <h1 id="headerTitle">Library</h1>
-            <button class="headerButtons addBook">ADD BOOK</button>
+            <button id="addBook" class="headerButtons addBook">ADD BOOK</button>
         </div>
         <div class="library">
             <!-- <div class="book" data-index="0">
@@ -39,19 +39,19 @@
                 <p>ADD NEW BOOK</p>
             </div>
             <div class="form">
-                <form>
+                <form onsubmit="addModalBook(); return false;" id="modalForm">
                     <input type="text" name="title" id="titleInput" placeholder="Title" required>
                     <input type="text" name="author" id="authorInput" placeholder="Author" required>
                     <input type="number" name="pages" id="pagesInput" placeholder="Pages" min="0" required>
                     <div class="readInputDiv">
-                        <input type="checkbox" name="read" id="readInput" required>
+                        <input type="checkbox" name="read" id="readInput">
                         <label for="readInput">Have you read it?</label>
                     </div>
                 </form>
             </div>
             <div class="modalbuttons">
-                <button class="modalbutton cancel">CANCEL</button>
-                <button class="modalbutton add">ADD</button>
+                <button id="cancelModal" class="modalbutton cancel">CANCEL</button>
+                <button type="submit" form="modalForm" id="addModalButton" class="modalbutton add">ADD</button>
             </div>
         </div>
     </div>

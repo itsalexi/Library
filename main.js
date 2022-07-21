@@ -49,9 +49,9 @@ function createNewElements() {
     readElement.classList.add("bookButton");
     removeElement.classList.add("bookButton", "remove");
 
-    titleElement.textContent = myLibrary[book].title;
-    authorElement.textContent = myLibrary[book].author;
-    pagesElement.textContent = myLibrary[book].pages;
+    titleElement.textContent = `"${myLibrary[book].title}"`;
+    authorElement.textContent = `By ${myLibrary[book].author}`;
+    pagesElement.textContent = `${myLibrary[book].pages} pages`;
 
     removeElement.textContent = "Remove";
 
@@ -108,9 +108,48 @@ function findButton(e) {
   //   console.log(`${classes} \n${parent}`);
 }
 
-document.addEventListener("click", findButton);
+// Modal Code
 
-createBook("5", "Gasdfhagasdgers", 59, false);
+let modal = document.querySelector(".modal");
+let modalbutton = document.getElementById("addBook");
+let cancelButton = document.getElementById("cancelModal");
+let addButton = document.getElementById("addModalButton");
+
+let titleInput = document.getElementById("titleInput");
+let authorInput = document.getElementById("authorInput");
+let pagesInput = document.getElementById("pagesInput");
+let readBox = document.getElementById("readInput");
+let addBookForm = document.getElementById("modalForm");
+modalbutton.onclick = function () {
+  modal.style.display = "flex";
+};
+
+cancelButton.onclick = function () {
+  modal.style.display = "none";
+};
+
+function addModalBook() {
+  let title = titleInput.value;
+  let author = authorInput.value;
+  let pages = pagesInput.value;
+  let read = readBox.checked;
+  createBook(title, author, pages, read);
+  modal.style.display = "none";
+  titleInput.value = "";
+  authorInput.value = "";
+  pagesInput.value = "";
+  readBox.checked = false;
+}
+
+addBookForm.submit = addModalBook;
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+document.addEventListener("click", findButton);
 // TODO
 // Create a function that creates a new book and adds it to the Library array (then call the update Library array)
 // Create a function that updates the Library Div (reset the library Div and create new Elements for each book)
