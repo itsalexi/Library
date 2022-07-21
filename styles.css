@@ -8,7 +8,7 @@
 button {
   cursor: pointer;
 }
-#addBook {
+.addBook {
   justify-self: flex-end;
   border: 3px solid #0f172a;
   background: #475569;
@@ -19,7 +19,7 @@ button {
   font-size: 20px;
 }
 
-#addBook:hover {
+.addBook:hover {
   background-color: #64748b;
 }
 
@@ -47,8 +47,9 @@ button {
 
 .library {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 0 50px;
   background-color: #334155;
 }
 
@@ -60,7 +61,6 @@ button {
   border: 1px solid #0f172a;
   width: 250px;
   height: 250px;
-  margin-left: 20px;
   margin-top: 20px;
   padding: 25px 10px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 3px;
@@ -93,13 +93,13 @@ button {
   background-color: #ff7377;
 }
 
-.read:hover{
-    background-color: rgb(176, 243, 176);
-
+.read:hover {
+  background-color: rgb(176, 243, 176);
 }
 
-.remove:hover, .notread:hover {
-    background-color: #e8989a;
+.remove:hover,
+.notread:hover {
+  background-color: #e8989a;
 }
 .footer {
   display: flex;
