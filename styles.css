@@ -24,7 +24,7 @@ button {
 .modal-content {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.2f 0.5fr 0.2fr;
+  grid-template-rows: 0.2fr 0.5fr 0.2fr;
   background-color: #334155;
   border-radius: 15px;
   margin: 15% auto;
