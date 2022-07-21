@@ -19,6 +19,7 @@ button {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
 }
 
 .modal-content {
@@ -29,7 +30,8 @@ button {
   border-radius: 15px;
   margin: 15% auto;
   border: 1px solid #0f172a;
-  width: 33%;
+  height: 25em;
+  min-width: 25em;
 }
 
 input {
