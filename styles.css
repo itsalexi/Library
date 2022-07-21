@@ -26,7 +26,7 @@ button {
   grid-template-columns: 1fr;
   grid-template-rows: 0.2f 0.5fr 0.2fr;
   background-color: #334155;
-  border-radius: 10px;
+  border-radius: 15px;
   margin: 15% auto;
   border: 1px solid #0f172a;
   width: 33%;
@@ -75,6 +75,7 @@ input {
 
 .modalbutton.add {
   background-color: #008000;
+  border-bottom-right-radius: 15px;
 }
 
 .modalbutton.add:hover {
@@ -83,6 +84,7 @@ input {
 
 .modalbutton.cancel {
   background-color: crimson;
+  border-bottom-left-radius: 15px;
 }
 .modalbutton.cancel:hover {
   background-color: rgb(221, 47, 82);
@@ -146,6 +148,7 @@ input {
 
 .library {
   display: grid;
+  justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
   padding: 0 50px;
