@@ -2,12 +2,111 @@
   margin: 0;
   font-family: "Inter", sans-serif;
   color: #f1f5f9;
-  text-shadow: 3px 2px 2px #0f172a;
+  text-shadow: 0px 2px 2px #0f172a;
 }
 
 button {
   cursor: pointer;
 }
+
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2f 0.5fr 0.2fr;
+  background-color: #334155;
+  border-radius: 10px;
+  margin: 15% auto;
+  border: 1px solid #0f172a;
+  width: 33%;
+}
+
+input {
+  text-shadow: none;
+}
+
+.modalheader {
+  height: auto;
+  grid-column: 1 / 3;
+  text-align: center;
+  padding: 20px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-column: 1 / 3;
+  width: 100%;
+  padding: 30px;
+}
+
+.form input {
+  height: 25px;
+  padding: 10px;
+  background-color: #334155;
+  border: none;
+  border-bottom: 1px solid #0f172a;
+}
+.form {
+  display: flex;
+}
+
+.modalbuttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1 / 3;
+  height: 100%;
+  padding-bottom: 50px;
+}
+
+.modalbutton.add {
+  background-color: #008000;
+}
+
+.modalbutton.add:hover {
+  background-color: #04ae04;
+}
+
+.modalbutton.cancel {
+  background-color: crimson;
+}
+.modalbutton.cancel:hover {
+  background-color: rgb(221, 47, 82);
+}
+
+.modalbutton {
+  border: none;
+  font-size: 24px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 3px;
+}
+
+.readInputDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+}
+
+.readInputDiv input {
+  height: 24px;
+  width: 24px;
+}
+
 .addBook {
   justify-self: flex-end;
   border: 3px solid #0f172a;

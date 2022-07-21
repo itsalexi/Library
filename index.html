@@ -33,6 +33,28 @@
             <p class="footerText">Built for <a href="https://theodinproject.com">The Odin Project</a> ❤️</p>
         </div>
     </div>
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <div class="modalheader">
+                <p>ADD NEW BOOK</p>
+            </div>
+            <div class="form">
+                <form>
+                    <input type="text" name="title" id="titleInput" placeholder="Title" required>
+                    <input type="text" name="author" id="authorInput" placeholder="Author" required>
+                    <input type="number" name="pages" id="pagesInput" placeholder="Pages" min="0" required>
+                    <div class="readInputDiv">
+                        <input type="checkbox" name="read" id="readInput" required>
+                        <label for="readInput">Have you read it?</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modalbuttons">
+                <button class="modalbutton cancel">CANCEL</button>
+                <button class="modalbutton add">ADD</button>
+            </div>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 
