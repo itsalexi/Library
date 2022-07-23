@@ -6,6 +6,8 @@ A simple Library app that stores the books that you plan to read, or have read! 
 
 ![App Screenshot](https://i.ibb.co/Pwwbdgq/image-2022-07-23-190151382.png)
 
+## Live version
+[Check it out, live on Github Pages!](https://itsalexi.github.io/Library)
 
 ## Languages Used
 
